@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { createGlobalStyle } from 'styled-components';
 
-function App() {
+import Map from './Map';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: Helvetica, sans-seirf;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .leaflet-container {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .leaflet-tile {
+    filter: saturate(0.5) !important;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`;
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Map />
+    </>
   );
 }
-
-export default App;

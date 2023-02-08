@@ -1,0 +1,14 @@
+{
+  "initialLatitude": 61.49911,
+  "initialLongitude": 23.78712,
+  "reportables": [
+    {
+      "type": "bilberry",
+      "name": "mustikka"
+    },
+    {
+      "type": "chanterelle",
+      "name": "kantarelli"
+    }
+  ]
+}
